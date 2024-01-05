@@ -75,6 +75,14 @@ return {
         desc = "Lists files in your current working directory, respects .gitignore",
       },
       {
+        ";g",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.git_files({})
+        end,
+        desc = "List git files",
+      },
+      {
         ";r",
         function()
           local builtin = require("telescope.builtin")
@@ -178,8 +186,19 @@ return {
             -- your custom insert mode mappings
             ["n"] = {
               -- your custom normal mode mappings
-              ["A"] = fb_actions.create,
-              ["h"] = fb_actions.goto_parent_dir,
+              ["a"] = fb_actions.create,
+              ["m"] = fb_actions.move,
+              ["r"] = fb_actions.rename,
+              ["y"] = fb_actions.copy,
+              ["d"] = fb_actions.remove,
+              ["o"] = fb_actions.open,
+              ["g"] = fb_actions.goto_parent_dir,
+              ["e"] = fb_actions.goto_home_dir,
+              ["w"] = fb_actions.goto_cwd,
+              ["t"] = fb_actions.change_cwd,
+              ["f"] = fb_actions.toggle_browser,
+              ["h"] = fb_actions.toggle_hidden,
+              ["s"] = fb_actions.toggle_all,
               ["/"] = function()
                 vim.cmd("startinsert")
               end,
