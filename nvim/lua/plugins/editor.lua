@@ -80,7 +80,7 @@ return {
           local builtin = require("telescope.builtin")
           builtin.git_files({})
         end,
-        desc = "List git files",
+        desc = "List Git Files",
       },
       {
         ";r",

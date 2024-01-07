@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>-", ":split<cr>", opts)
 vim.keymap.set("n", "dp", ":normal daw<cr>", opts)
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", opts)
+vim.keymap.set("i", "qq", "<Esc>", opts)
 set_keymap("n", "<leader>bm", ":b#<cr>", { noremap = true, silent = true, desc = "ir al ultimo buffer" })
 
 --Diagnostics
@@ -46,4 +47,28 @@ set_keymap(
   "<leader>cpc",
   "<cmd>lua require('package-info').change_version()<cr>",
   { silent = true, noremap = true, desc = "Change package version" }
+)
+
+--Delete line
+function DeleteLinesWithPattern()
+  local pattern = vim.fn.input("Ingrese el patrón de búsqueda: ")
+  vim.cmd("execute 'g/' . escape('" .. pattern .. "', '/') . '/d'")
+end
+
+--Delete only word
+function DeleteWordWithPattern()
+  local pattern = vim.fn.input("Ingrese el patrón de búsqueda: ")
+  vim.cmd("execute '%s/' . escape('" .. pattern .. "', '/') . '/'")
+end
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>dl",
+  ":lua DeleteLinesWithPattern()<CR>",
+  { noremap = true, silent = true, desc = "Borrar linea entera" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>dd",
+  ":lua DeleteWordWithPattern()<CR>",
+  { noremap = true, silent = true, desc = "Borrar solo palabra" }
 )
