@@ -51,24 +51,24 @@ set_keymap(
 
 --Delete line
 function DeleteLinesWithPattern()
-  local pattern = vim.fn.input("Ingrese el patrón de búsqueda: ")
+  local pattern = vim.fn.input("Enter the search pattern")
   vim.cmd("execute 'g/' . escape('" .. pattern .. "', '/') . '/d'")
 end
 
 --Delete only word
 function DeleteWordWithPattern()
-  local pattern = vim.fn.input("Ingrese el patrón de búsqueda: ")
+  local pattern = vim.fn.input("Enter the search pattern")
   vim.cmd("execute '%s/' . escape('" .. pattern .. "', '/') . '/'")
 end
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>dl",
   ":lua DeleteLinesWithPattern()<CR>",
-  { noremap = true, silent = true, desc = "Borrar linea entera" }
+  { noremap = true, silent = true, desc = "Delete the entire line" }
 )
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>dd",
   ":lua DeleteWordWithPattern()<CR>",
-  { noremap = true, silent = true, desc = "Borrar solo palabra" }
+  { noremap = true, silent = true, desc = "Delete word" }
 )
