@@ -16,7 +16,7 @@ lines = 45
 # decorations = "None"
 dynamic_padding = true
 dynamic_title = true
-opacity = 0.9
+# opacity = 0.9
 decorations_theme_variant= "Dark"
 
 [mouse]

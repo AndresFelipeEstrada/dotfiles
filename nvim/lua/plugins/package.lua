@@ -3,13 +3,12 @@ return {
     "vuki656/package-info.nvim",
     -- ft = "json",
     lazy = true,
-    on = "package.json",
     dependencies = { "MunifTanjim/nui.nvim" },
     config = function()
-      local colors = require("lualine.themes.gruvbox_dark")
-
+      local colors = require("lualine.themes.catppuccin-mocha")
       require("package-info").setup({
         package_manager = "npm",
+        autostart = true,
         colors = {
           outdated = colors,
         },
