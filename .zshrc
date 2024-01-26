@@ -109,11 +109,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+unalias gc
 alias nv="nvim" 
 alias gs="git status"
 alias gp="git push"
 alias cl="clear"
 alias ga="git add ."
+# alias gc="git commit -m"
+gc(){
+  git commit -m "$1"
+}
 
  export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
