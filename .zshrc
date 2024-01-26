@@ -109,9 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# gc() {
-#     git commit -m "$1"
-# }
 alias nv="nvim" 
 alias gs="git status"
 alias gp="git push"
