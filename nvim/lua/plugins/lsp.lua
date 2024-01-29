@@ -21,6 +21,7 @@ return {
           "hrsh7th/cmp-git",
           {
             "L3MON4D3/LuaSnip",
+            version = "v2.*",
             after = "nvim-cmp",
             config = function()
               require("config.snippets")
