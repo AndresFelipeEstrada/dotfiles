@@ -39,19 +39,21 @@ shape = "Beam"
 size = 12
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+# family = "FiraCode Nerd Font Mono"
+family = "Cascadia Code"
 # style = "Regular"
 
 [font.bold]
-family = "FiraCode Nerd Font Mono"
+# family = "FiraCode Nerd Font Mono"
+family = "Cascadia Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font Mono"
+family = "Cascadia Code"
 style = "Bold Italic"
 
 [font.italic]
-family = "FiraCode Nerd Font Mono"
+family = "Cascadia Code"
 style = "Italic"
 
 [scrolling]
