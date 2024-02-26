@@ -133,3 +133,11 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="/home/andres/.local/share/fnm:$PATH"
 eval "`fnm env`"
 export PATH=$PATH:~/.local/bin
+
+# pnpm
+export PNPM_HOME="/home/andres/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
