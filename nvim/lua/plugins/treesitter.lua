@@ -6,6 +6,7 @@ return {
         "bash",
         "html",
         "javascript",
+        "jsdoc",
         "json",
         "lua",
         "markdown",
