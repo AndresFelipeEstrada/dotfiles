@@ -18,6 +18,7 @@ return {
   {
     "stevearc/dressing.nvim",
     lazy = true,
+    event = "BufRead",
     init = function()
       ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.select = function(...)

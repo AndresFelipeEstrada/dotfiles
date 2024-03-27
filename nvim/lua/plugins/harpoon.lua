@@ -1,11 +1,9 @@
 return {
   "theprimeagen/harpoon",
   branch = "harpoon2",
-  lazy = true,
+  lazy = false,
   dependencies = { "nvim-lua/plenary.nvim" },
-  config = function()
-    require("harpoon"):setup()
-  end,
+  config = true,
   keys = {
     {
       "<leader>a",

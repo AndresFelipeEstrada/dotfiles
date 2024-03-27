@@ -1,39 +1,40 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "BufRead",
     opts = {
       ensure_installed = {
-        "bash",
+        -- "bash",
         "html",
         "javascript",
-        "jsdoc",
+        -- "jsdoc",
         "json",
         "lua",
         "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
+        -- "markdown_inline",
+        -- "python",
+        -- "query",
+        -- "regex",
         "tsx",
         "typescript",
-        "vim",
-        "yaml",
-        "go",
-        "svelte",
+        -- "vim",
+        -- "yaml",
+        -- "go",
+        -- "svelte",
         "css",
-        "scss",
+        -- "scss",
       },
-      highlight = {
-        enable = true,
-        disable = function(_, buf)
-          local max_filesize = 10000 * 1024 -- 10 MB
-          local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-          if ok and stats and stats.size > max_filesize then
-            vim.notify("Tree sitter disabled")
-            return true
-          end
-        end,
-      },
+      -- highlight = {
+      --   enable = true,
+      --   disable = function(_, buf)
+      --     local max_filesize = 10000 * 1024 -- 10 MB
+      --     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+      --     if ok and stats and stats.size > max_filesize then
+      --       vim.notify("Tree sitter disabled")
+      --       return true
+      --     end
+      --   end,
+      -- },
     },
   },
 }
